@@ -1,8 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "ackermann.c"
 
 int main() {
     int n = 8;
 
-    printf("Ack(3,%d): %d\n", n, Ack(3, n));
-    return(10);
+    int result = Ack(3, n);
+  
+    if(result == 2045){  
+      return(10);
+    } else{
+      return 1;
+    }
 }
