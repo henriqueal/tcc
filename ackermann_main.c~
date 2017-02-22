@@ -3,7 +3,9 @@
 int main() {
     int n = 8;
 
+ #pragma monitor start
     int result = ackermann(3, n);
+ #pragma monitor stop
     if(result == 2045){  
       return 10;
     } else{

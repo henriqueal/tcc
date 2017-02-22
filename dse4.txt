@@ -72,20 +72,6 @@ Creating ArrayLiteral
 Creating ArrayLiteral
 Creating ArrayLiteral
 Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
-Creating ArrayLiteral
     Importing: Parse Successful!
     Organizing Imported aspects from target_config.laratarget_config.lara
     Organized Imported aspects!
@@ -122,14 +108,14 @@ Reading file: dse.xml
   3. Executing Main Aspect
  -==================================================-
 Collecting Clang/LLVM Optimization Levels Performance (in µseconds)...
-	-O0: -6
-	-O1: -6
-	-O2: -6
-	-O3: -6
+	-O0: -1
+	-O1: -1
+	-O2: -1
+	-O3: -1
 
 Tuning Simulated Annealing Paramenters...
-	T_max	: -8.65617024533378
-	T_min	: -0.000013028834457097557
+	T_max	: -1.4426950408889634
+	T_min	: -0.0000021714724095162594
 	α 	: 0.8745321860486915
 
 Performing 100 DSE iterations using Simulated Annealing considering a maximum of 128 compiler passes per sequence...
@@ -141,15 +127,15 @@ Best Solution Found...
 	Latency  : 1.7976931348623157e+308
 
 Speedup Over Clang/LLVM Optimization Levels...
-	Over -O0 : -3.3376107877608026e-308
+	Over -O0 : -5.562684646268003e-309
 	Over -O0 [including optim levels] : 1
-	Over -O1 : -3.3376107877608026e-308
+	Over -O1 : -5.562684646268003e-309
 	Over -O1 [including optim levels] : 1
-	Over -O2 : -3.3376107877608026e-308
+	Over -O2 : -5.562684646268003e-309
 	Over -O2 [including optim levels] : 1
-	Over -O3 : -3.3376107877608026e-308
+	Over -O3 : -5.562684646268003e-309
 	Over -O3 [including optim levels] : 1
-	Over -OX : -3.3376107877608026e-308
+	Over -OX : -5.562684646268003e-309
 	Over -OX [including optim levels] : 1
 
 Design Space Exploration Execution Stats...
