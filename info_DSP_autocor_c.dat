@@ -1,0 +1,126 @@
+cmdline: /opt/tsim-eval/tsim/linux-x64/tsim-leon3 -c /opt/lara-tools/larad/targets/leon3/llvm371/scripts/tsim_input.txt -logfile info.dat application 
+
+ This TSIM evaluation version will expire 2017-06-07
+
+
+ TSIM/LEON3 SPARC simulator, version 2.0.49 (evaluation version)
+
+ Copyright (C) 2016, Cobham Gaisler - all rights reserved.
+ This software may only be used with a valid license.
+ For latest updates, go to http://www.gaisler.com/
+ Comments or bug-reports to support@gaisler.com
+
+system frequency: 50.000 MHz
+serial port A on stdin/stdout
+allocated 4096 KiB SRAM memory, in 1 bank
+allocated 32 MiB SDRAM memory, in 1 bank
+allocated 2048 KiB ROM memory
+icache: 1 * 4 KiB, 16 bytes/line (4 KiB total)
+dcache: 1 * 4 KiB, 16 bytes/line (4 KiB total)
+section: .text, addr: 0x40000000, size 47456 bytes
+section: .data, addr: 0x4000b960, size 2968 bytes
+read 393 symbols
+tsim> prof 1 1
+profiling enabled, sample period 1
+tsim> run
+profiling enabled, sample period 1
+starting at 0x40000000
+return: 10
+
+
+tsim> perf
+
+ Cycles       :     63182
+ Instructions :     33312
+ Overall CPI  :      1.90
+
+ CPU performance (50.0 MHz)  : 26.36 MOPS (26.36 MIPS,  0.00 MFLOPS)
+ Cache hit rate              : 98.6 % (inst: 98.7, data:98.2)
+ AHB bandwidth utilisation   : 53.5 % (inst:  7.0, data: 46.4)
+ Simulated time              :   1.26 ms
+ Processor utilisation       : 100.00 %
+ Real-time performance       :   3.59 %
+ Simulator performance       :   0.95 MIPS
+ Used time (sys + user)      :   0.04 s
+
+tsim> prof
+function      ratio(%)
+slavego                                   52.30
+zerobss                                   52.22
+pnpinit                                   49.36
+main                                      48.40
+callcpuinit                               46.56
+find_apbslv                               46.16
+T.16                                      45.58
+DSP_autocor_c                             40.01
+memcpy                                    33.40
+printf                                     7.40
+_vfprintf_r                                7.17
+fflush                                     2.82
+_write_r                                   2.24
+write                                      2.16
+T.17                                       2.04
+outbyte                                    1.64
+__sinit                                    0.91
+__sprint                                   0.90
+std                                        0.87
+__sfvwrite                                 0.78
+ambapp_dev_find_match                      0.39
+__register_exitproc                        0.37
+atexit                                     0.34
+__swsetup                                  0.34
+_hardreset                                 0.33
+__window_overflow_rettseq_ret              0.31
+memmove                                    0.29
+_erodata                                   0.21
+_window_underflow_svt                      0.20
+___st_pthread_mutex_lock                   0.18
+_hardreset_custom_weak                     0.17
+start                                      0.17
+__st_pthread_mutex_unlock                  0.14
+___st_pthread_mutexattr_destroy            0.13
+___st_pthread_mutexattr_settype            0.12
+___st_pthread_mutex_init                   0.12
+___st_pthread_mutexattr_init               0.11
+frame_dummy                                0.09
+_hardreset_mvt                             0.09
+__smakebuf                                 0.09
+__swrite                                   0.09
+__do_global_ctors_aux                      0.07
+cpuinit                                    0.07
+__st_pthread_mutex_destroy                 0.06
+_call_initcalls                            0.06
+vfprintf                                   0.05
+localeconv                                 0.04
+_start                                     0.04
+_exit                                      0.02
+amba_init                                  0.02
+__window_overflow_rettseq                  0.02
+prelibchook                                0.02
+_hardreset_custom_svt_weak                 0.02
+__fp_lock_all                              0.02
+sbrk                                       0.01
+bdinit2                                    0.01
+p05.2367                                   0.01
+__errno                                    0.01
+_cleanregs_custom_weak                     0.01
+tsim> reg
+
+	  INS       LOCALS      OUTS     GLOBALS
+   0:  0000000A   4000C400   0000000C   00000000
+   1:  4000B96C   40009F60   00000010   00000001
+   2:  00000010   40009F64   4000C954   00000000
+   3:  00002768   00000000   00000010   00000008
+   4:  00000000   00000000   00000001   4000B6A0
+   5:  00000000   00000000   00FFFFFF   00000003
+   6:  403FFE00   00000000   403FFD90   4000A3F4
+   7:  4000106C   00000000   40001ABC   00000000
+
+ psr: F34010C6   wim: 00000001   tbr: 40000800   y: 00000000
+
+ pc:  40000800  91d02000  ta	0x0
+ npc: 40000804  01000000  nop
+
+ IU in error mode
+
+tsim> quit
